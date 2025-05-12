@@ -1,0 +1,29 @@
+
+
+cd ..
+cd ..
+cd employees
+
+mysql -u root -p
+1234
+
+source employees.sql;
+show databases;
+
+결과창: 
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| employees          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| shopdb             |
+| sys                |
+| world              |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql>
