@@ -19,8 +19,7 @@ CREATE DATABASE tabledb;
 -- 문제2: 다음컬럼을 가지는 buytbl테이블을 만드세요.(슬라이드3 그림참조)
 DROP TABLE IF EXISTS buytbl;
 CREATE TABLE buytbl(
-	 num      
-	 INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	 num       INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	 userid    CHAR(8) NOT NULL,
 	 prodName  CHAR(6) NOT NULL,
 	 groupName CHAR(4) NULL,
@@ -70,7 +69,7 @@ DROP TABLE IF EXISTS prodTbl;
  prodDate  DATETIME NOT NULL,
  prodCur   CHAR(10) NULL,
  CONSTRAINT PK_prodTbl_proCode_prodID 
-PRIMARY KEY (prodCode, prodID)
+ PRIMARY KEY (prodCode, prodID)
  );
 
 
