@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.scoula'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //자바 기본 코드할때 필요한 라이브러리를 위에다 설정.
+    //필요한거 :
+    //몽고db드라이버 필요함.
+    implementation 'org.mongodb:mongodb-driver-sync:5.0.0'
+    //log 필요함.
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+
+    //롬복 필요(추가)
+    compileOnly("org.projectlombok:lombok:1.18.32")
+    annotationProcessor("org.projectlombok:lombok:1.18.32")
+    //+) 롬복 테스트용 2줄
+    testCompileOnly("org.projectlombok:lombok:1.18.32")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.32")
+
+    //-------------------------------------------//
+    //테스트 코드할 때 필요한 라이브러리 설정은 이 아래에다.
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
