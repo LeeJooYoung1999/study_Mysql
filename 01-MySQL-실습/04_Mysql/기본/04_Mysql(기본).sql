@@ -22,7 +22,7 @@ select u.userID, u.name, b.prodName, u.addr,
 	concat(u.mobile1, u.mobile2) as 연락처
 from usertbl u
 left outer join buytbl b
-on u.useerID = b.user
+on u.userID = b.userID
 order by u.userID;
 
 -- 문제4-1 : sqldb의 사용자를 모두 조회하되 전화가 없는 사람은 제외하고 출력하세요.
